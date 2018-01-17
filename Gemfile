@@ -31,11 +31,13 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'pg', '~> 0.21.0'
-
+group :production do
+  gem 'pg', '~> 0.21.0'
+end
 
 group :test do
   gem 'rspec-rails', '~> 3.7.2'
+  gem 'capybara'
 end
 
 group :development, :test do
